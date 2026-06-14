@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineTolly · Tollywood Movie Booking</title>
+  <meta name="description" content="Book tickets for the latest Tollywood blockbusters — stunning, fast and mobile-ready." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-mark">🎬</span>
+      <span class="brand-text">Cine<span>Tolly</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#now-showing">Now Showing</a>
+      <a href="#coming-soon">Coming Soon</a>
+      <a href="#offers">Offers</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero carousel -->
+  <section class="hero" id="home">
+    <div class="hero-slides" id="heroSlides"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" id="heroContent"></div>
+    <div class="hero-dots" id="heroDots"></div>
+    <div class="scroll-cue"><span></span></div>
+  </section>
+
+  <!-- Now Showing -->
+  <section class="section reveal" id="now-showing">
+    <div class="section-head">
+      <h2>Now <span>Showing</span></h2>
+      <p>The biggest Tollywood blockbusters in theatres near you</p>
+    </div>
+    <div class="movie-grid" id="nowShowingGrid"></div>
+  </section>
+
+  <!-- Coming Soon -->
+  <section class="section reveal" id="coming-soon">
+    <div class="section-head">
+      <h2>Coming <span>Soon</span></h2>
+      <p>Pre-book your seats before they're gone</p>
+    </div>
+    <div class="movie-rail" id="comingSoonRail"></div>
+  </section>
+
+  <!-- Offers strip -->
+  <section class="section offers reveal" id="offers">
+    <div class="section-head">
+      <h2>Offers &amp; <span>Perks</span></h2>
+      <p>More popcorn, less spend</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card"><div class="offer-icon">🍿</div><h3>Combo Saver</h3><p>Flat 30% off on popcorn + drink combos every weekday.</p></div>
+      <div class="offer-card"><div class="offer-icon">🎟️</div><h3>Buy 2 Get 1</h3><p>Book 2 tickets and get the third one absolutely free.</p></div>
+      <div class="offer-card"><div class="offer-icon">💳</div><h3>Card Cashback</h3><p>Up to ₹150 cashback on UPI &amp; partner bank cards.</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand"><span class="brand-mark">🎬</span><span class="brand-text">Cine<span>Tolly</span></span></div>
+      <p>Demo movie booking app · Tollywood edition · Built with HTML, CSS &amp; JS</p>
+      <p class="muted">© 2026 CineTolly. For testing purposes only. Posters belong to their respective studios.</p>
+    </div>
+  </footer>
+
+  <!-- Booking modal -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
